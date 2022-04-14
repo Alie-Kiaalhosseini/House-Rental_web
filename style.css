@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+        text-decoration: none;
+}
+ul li{
+        list-style: none;
+}
+/* header */
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('./images/banner.png');
+    height: 100vh;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 7%;
+    align-content: center;
+}
+nav i{
+    display: none;
+}
+.logo{
+    cursor: pointer;
+    width: 12em;
+}
+.nav-links li{
+    display: inline-block;
+    margin-left: 2em;
+    
+}
+.active{
+    position: relative;
+}
+.active::after{
+    content: " ";
+    background-color: #fff;
+    width: 1.5em;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.8em;
+    border-radius: 2px;
+}
+.nav-links a{
+    color: #fff;
+}
+.register-btn{
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0.5em;
+    font-size: 1em;
+    margin-bottom: 1.5em ;
+}
+
+.titr{
+    padding: 0 7%;
+    text-align: center;
+    margin-top: 4em;
+    font-size: 4vw;
+    color: #fff;
+}
+.search-bar{
+    width: 50%;
+    margin: 3em auto;
+    padding: 0.7em 1em ;
+    background-color: #fff;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.search-bar input{
+    display: block;
+    outline: none;
+    border: 0;
+    /* background-color: transparent; */
+}
+.search-bar button{
+    border-radius: 50%;
+    background-color: #ff5361;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 2.5em;
+    height: 2.5em;
+}
+.search-bar button img{
+    width: 0.95em;
+    padding-top: 0.3em;
+}
+.search-bar .location-input{
+    flex: 1;
+}
+.search-bar div label{
+    font-weight: 600;
+}
+
+/* main */
+
+.title{
+    color: #333;
+    font-weight: 500;
+    font-size: 2.2vw;
+    margin: 50px 0 20px ;
+}
+.container1{
+    margin: 0 10.1%;
+}
+.exclusives, .trending,.stories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    grid-gap: 30px;
+}
+
+
+/* exclusives */
+
+
+.exclusives section {
+    position: relative;
+}
+.exclusives section img{
+    border-radius: 7px;
+    width: 100%;
+}
+.exclusives section span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+/* trending */
+
+.trending,.stories{
+margin-bottom: 2em;
+}
+.trending section img{
+    width: 100%;
+    border-radius: 6px;
+}
+.trending section h3{
+    margin-top: 0.85em;
+    font-weight: 600;
+}
+
+
+/* cta */
+
+.cta{
+    background-image: linear-gradient(to right,#3f2321,transparent),url(./images/banner-2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 7px;
+    padding: 2% 3%;
+    color: #ffff;
+}
+.cta h3{
+    font-size: 3.5vw;
+    line-height: 4vw;
+    font-weight: 500;
+}
+.cta p{
+    font-size: 1em;
+    margin: 0.8em 0.3em ;
+}
+.cta-read-more{
+    background-color: #ff5361;
+    border-radius: 20px;
+    color: rgb(219, 204, 204);
+    padding: 1em 1.5em;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+/* Stories */
+
+
+.stories section img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.stories section{
+    position: relative;
+    text-align: center;
+}
+
+.stories p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    color: #fff;
+    transform: translate(-50%,-50%);
+    font-size: 1.5em;
+}
+
+.start-btn{
+    text-align: center;
+    background-color: #ff5361;
+    color: #fff;
+    width: 40%;
+    max-width: 350px;
+    display: block;
+    margin: 3em auto;
+    padding: 1em;
+    border-radius: 60px;
+}
+
+/* about staybnb */
+
+.about-msg{
+    color: #333;
+    margin: 5em 0;
+    text-align: center;
+    font-size: 1em;
+}
+.about-msg h2{
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    font-weight: 600;
+}
+
+/* footer */
+
+footer{
+    width: 80%;
+    margin: 3em 10% 2em 10% ;
+    text-align: center;
+}
+footer a{
+    color: #999;
+    font-size: 1.2em;
+}
+footer i{
+    margin-left: 0.5em;
+}
+footer hr{
+    background-color: #999;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    margin: 1em 0;
+}
+
+
+
+/* Responsive mood */
+
+@media only screen and (max-width: 700px){
+
+    /* header */
+    .logo{
+        position: fixed;
+        top: 2.5%;
+        left: 7%;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        width: 100%;
+        padding: 4em 7% 0;
+        background-color: #000;
+        text-align: right;
+        max-height: 113px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    .nav-links li{
+        margin: 0.8em 0;
+        display: block;
+        padding: 1.5em;
+    }
+    .register-btn{
+        padding: 0.5em 1em;
+        margin: 0.1em 1em 1.5em;
+        display: inline-block;
+    }
+    nav i{
+        display: block;
+        color: #fff;
+        position: fixed;
+        top: 4%;
+        right: 7%;
+        font-size: 1.5em;
+    }
+    .active::after{
+        left: -40%;
+        transform: translate(0,50%);
+        bottom: 50%;
+    }
+    .hidemenu{
+        max-height: 500px;
+    }
+    .titr{
+        padding-top: 3em;
+        margin-top: 2.3em;
+        font-size: 7vw;
+    }
+    .search-bar{
+        display: block;
+        width: 90%;
+        margin: 1.9em auto;
+        padding: 1.5em 0.7em 1.9em;
+        border-radius: 5px;
+        position: relative;
+    }
+    .search-bar input{
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        margin-bottom: 1.3em;
+        margin-top: 0.8em;
+        padding-bottom: 0.8em;
+    }
+    .search-bar button{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,50%);
+    }
+    .title{
+        font-size: 6vw;
+    }
+    .cta{
+        padding: 1em 5%;
+    }
+    .cta h3{
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+    .cta p{
+        font-size: 0.9em;
+    }
+    .cta-read-more{
+        padding: 0.5em 0.9em;
+        border-radius: 0.3em;
+        margin-top: 0.8em;
+        font-size: 0.9em;
+    }
+    .stories p{
+        font-size: 1.5em;
+    }
+    .about-msg{
+        font-size: 0.95em;
+    }
+}
